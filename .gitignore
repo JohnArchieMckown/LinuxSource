@@ -2,4 +2,5 @@
 !*.*
 !LICENSE
 *.o
+*.swp
 a.out
