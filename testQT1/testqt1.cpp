@@ -29,3 +29,12 @@ void testQT1::on_CloseButton_clicked()
 {
     close();
 }
+
+void testQT1::on_actionAbout_triggered()
+{
+    QString aboutText = "";
+    aboutText += "Version:\t0.1\n";
+    aboutText += "Author:\tJohn Archie McKown\n";
+    aboutText += "Date:\t2024-06-30";
+    QMessageBox::about(this, "About", aboutText);
+}

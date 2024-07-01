@@ -75,7 +75,10 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAbout">
    <property name="text">
-    <string>About</string>
+    <string>&amp;About</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::AboutRole</enum>
    </property>
   </action>
  </widget>

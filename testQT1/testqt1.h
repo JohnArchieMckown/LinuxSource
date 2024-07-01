@@ -2,6 +2,7 @@
 #define TESTQT1_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,6 +24,8 @@ private slots:
     void on_pushButton_released();
 
     void on_CloseButton_clicked();
+
+    void on_actionAbout_triggered();
 
 private:
     Ui::testQT1 *ui;
