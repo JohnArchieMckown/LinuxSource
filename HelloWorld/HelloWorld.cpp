@@ -3,6 +3,6 @@
 using namespace std;
 
 int main (int argc, char *argv[], char *envp[]) {
-	cout << "Hello World!"; cout << endl;
+	cout << "Hello World!" << endl;
 	return 0;
 }
