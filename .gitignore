@@ -1,6 +1,6 @@
 *
 !*/
-*/build
+/build/*
 !*.*
 !LICENSE
 *.o
@@ -9,3 +9,6 @@
 *~
 a.out
 nohup.out
+/NetbeansJavaTemplate/build/*
+/qt/testQT1/build/*
+/qt/testConsole/build/*
