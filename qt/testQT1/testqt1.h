@@ -35,6 +35,8 @@ private slots:
 
     void on_Password_editingFinished();
 
+    void on_actionAboutQt_triggered();
+
 private:
     Ui::testQT1 *ui;
 };

@@ -14,11 +14,13 @@ class MainWindow(QMainWindow):
         super().__init__(parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+    
+    def doAboutQt():
+        QApplication.aboutQt()
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     widget = MainWindow()
-    widget.ui.menubar.
     widget.show()
     sys.exit(app.exec())

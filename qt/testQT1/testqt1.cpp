@@ -77,3 +77,8 @@ void testQT1::on_Password_editingFinished()
     UserPassword = (0 != ui->Password->text().length()) && (0 != ui->UserID->text().length());
     ui->Verify_User_Password->setEnabled(UserPassword);
 }
+
+void testQT1::on_actionAboutQt_triggered()
+{
+    QApplication::aboutQt();
+};

@@ -26,8 +26,10 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 600)
         self.actionAbout = QAction(MainWindow)
         self.actionAbout.setObjectName(u"actionAbout")
+        self.actionAbout.setMenuRole(QAction.MenuRole.AboutRole)
         self.actionAboutQt = QAction(MainWindow)
         self.actionAboutQt.setObjectName(u"actionAboutQt")
+        self.actionAboutQt.setMenuRole(QAction.MenuRole.AboutQtRole)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -52,8 +54,8 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.actionAbout.setText(QCoreApplication.translate("MainWindow", u"About", None))
-        self.actionAboutQt.setText(QCoreApplication.translate("MainWindow", u"AboutQt", None))
+        self.actionAbout.setText(QCoreApplication.translate("MainWindow", u"&About", None))
+        self.actionAboutQt.setText(QCoreApplication.translate("MainWindow", u"A&boutQt", None))
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))
     # retranslateUi
 
