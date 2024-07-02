@@ -9,13 +9,28 @@ from PySide6.QtWidgets import QApplication, QMainWindow
 #     pyside2-uic form.ui -o ui_form.py
 from ui_form import Ui_MainWindow
 
+from PySide6.QtWidgets import QMessageBox
+
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-    
-    def doAboutQt():
+        self.ui.actionAboutQt.triggered.connect(self.doAboutQt)
+        self.ui.actionAbout.triggered.connect(self.doAbout)
+
+    def doAbout(self):
+        aboutText =  "Version:\t0.1\n"
+        aboutText += "Author:\tJohn Archie McKown\n"
+        aboutText += "Date:\t2024-07-02"
+
+#        QMessageBox.information(self,"About",aboutText)
+        msgBox=QMessageBox(self)
+        msgBox.setText(aboutText)
+        msgBox.setStandardButtons(QMessageBox.Ok)
+        msgBox.exec()
+
+    def doAboutQt(self):
         QApplication.aboutQt()
 
 
