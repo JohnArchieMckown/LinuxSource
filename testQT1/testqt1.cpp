@@ -49,7 +49,7 @@ void testQT1::on_Verify_User_Password_clicked()
     QString pass = ui->Password->text();
     QString user = ui->UserID->text();
     QString LoginInfo = "User:" + user + " successfully logged on.";
-    ui->statusbar->showMessage(LoginInfo);
+    ui->statusbar->showMessage(LoginInfo, 10000);
     ui->UserID->clear();
     ui->Password->clear();
     ui->Verify_User_Password->setEnabled(false);
