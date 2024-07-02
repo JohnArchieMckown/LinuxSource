@@ -27,6 +27,14 @@ private slots:
 
     void on_actionAbout_triggered();
 
+    void on_Verify_User_Password_clicked();
+
+    void on_HidePassword_clicked();
+
+    void on_UserID_editingFinished();
+
+    void on_Password_editingFinished();
+
 private:
     Ui::testQT1 *ui;
 };

@@ -51,6 +51,70 @@
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="Verify_User_Password">
+    <property name="geometry">
+     <rect>
+      <x>255</x>
+      <y>107</y>
+      <width>134</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Verify / Login</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>0</y>
+      <width>362</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item alignment="Qt::AlignmentFlag::AlignBottom">
+        <widget class="QRadioButton" name="HidePassword">
+         <property name="text">
+          <string>Hide</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="UserID_label">
+           <property name="text">
+            <string>UserID</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="Password_Label">
+           <property name="text">
+            <string>Password</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLineEdit" name="UserID"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Password"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
