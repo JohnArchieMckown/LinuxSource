@@ -10,10 +10,9 @@ int main (int argc, char *argv[], char *envp[]) {
 	int index=0;
 	vector<string> arguments(argv, argv+argc);
 
-	cout << "There are " + to_string(argc) + " arguments"; cout << endl;
+	cout << "There are " + to_string(argc) + " arguments" << endl;
 	for(string argument : arguments) { 
-		cout << to_string(index++) + ":\t" +argument; 
-		cout << endl; 
+		cout << to_string(index++) + ":\t" +argument << endl; 
 	}
 	return 0;
 }
