@@ -1,9 +1,8 @@
 #include <QtCore/QCoreApplication>
 #include <QtCore/qglobal.h>
 
+#include <QTextStream>
 #include <QtCore/QProcessEnvironment>
-#include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -11,21 +10,22 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    const int pid = a.applicationPid();
-
+    const qint64 pid = a.applicationPid();
     const QStringList environment = QProcessEnvironment::systemEnvironment().toStringList();
-
     const QStringList args = a.arguments();
+    QTextStream input(stdin);
+    QTextStream output(stdout);
+    //    QTextStream errout(stderr);
 
-    std::cout << "Running with pid=" << pid << endl;
-    std::cout << endl << "Environment Variables" << endl;
+    output << "Running with pid=" << pid << Qt::endl;
+    output << Qt::endl << "Environment Variables" << Qt::endl;
     for (QString env : environment) {
-        cout << env.toStdString() << endl;
+        output << env << Qt::endl;
     }
 
-    std::cout << endl << "Program arguments (" << args.size() << "):" << endl;
+    output << Qt::endl << "Program arguments (" << args.size() << "):" << Qt::endl;
     for (QString arg : args) {
-        cout << arg.toStdString() << endl;
+        output << arg << Qt::endl;
     }
 
     return 0; // a.exec(); the a.exec() put in by qtcreator is wrong.
