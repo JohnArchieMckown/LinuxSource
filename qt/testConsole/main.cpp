@@ -17,11 +17,13 @@ int main(int argc, char *argv[])
     const QStringList environment = QProcessEnvironment::systemEnvironment().toStringList();
 
     QStringList args;
+    //    QString qs_arg;
     //  for (string s_arg : arguments) {
     for (int i = 0; i < argc; i++) {
         //      QString qs_arg = QString::fromStdString(s_arg);
-        QString qs_arg = QString::fromStdString(argv[i]);
-        args.push_back(qs_arg);
+        //        qs_arg = QString::fromStdString(argv[i]);
+        //        args.push_back(qs_arg);
+        args.push_back(QString::fromStdString(argv[i]));
     }
 
     std::cout << "Running with pid=" << pid << endl;
