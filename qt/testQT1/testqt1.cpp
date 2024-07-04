@@ -6,9 +6,9 @@ testQT1::testQT1(QWidget *parent)
     , ui(new Ui::testQT1)
 {
     ui->setupUi(this);
-    ui->Password->setEchoMode(QLineEdit::Password);
     ui->Password->clear();
     ui->UserID->clear();
+    ui->UserID->setFocus();
     ui->HidePassword->setChecked(true);
     ui->Verify_User_Password->setEnabled(false);
 }
@@ -49,10 +49,10 @@ void testQT1::on_Verify_User_Password_clicked()
     QString pass = ui->Password->text();
     QString user = ui->UserID->text();
     QString LoginInfo = "User:" + user + " successfully logged on.";
-    ui->statusbar->showMessage(LoginInfo, 10000);
+    ui->statusbar->showMessage(LoginInfo, 10000); // 10 seconds
     ui->UserID->clear();
     ui->Password->clear();
-    ui->Verify_User_Password->setEnabled(false);
+    ui->UserID->setFocus();
 }
 
 void testQT1::on_HidePassword_clicked()
