@@ -31,11 +31,11 @@ private slots:
 
     void on_HidePassword_clicked();
 
-    void on_UserID_editingFinished();
-
-    void on_Password_editingFinished();
-
     void on_actionAboutQt_triggered();
+
+    void on_UserID_textChanged(const QString &arg1);
+
+    void on_Password_textChanged(const QString &arg1);
 
 private:
     Ui::testQT1 *ui;

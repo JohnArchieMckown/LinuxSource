@@ -151,7 +151,7 @@
   </action>
   <action name="actionAboutQt">
    <property name="text">
-    <string>AboutQt...</string>
+    <string>A&amp;boutQt...</string>
    </property>
    <property name="menuRole">
     <enum>QAction::MenuRole::AboutQtRole</enum>

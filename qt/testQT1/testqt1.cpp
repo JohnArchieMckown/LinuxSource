@@ -8,7 +8,7 @@ testQT1::testQT1(QWidget *parent)
     ui->setupUi(this);
     ui->Password->setEchoMode(QLineEdit::Password);
     ui->Password->clear();
-    ui->Password->clear();
+    ui->UserID->clear();
     ui->HidePassword->setChecked(true);
     ui->Verify_User_Password->setEnabled(false);
 }
@@ -64,21 +64,21 @@ void testQT1::on_HidePassword_clicked()
     }
 }
 
-void testQT1::on_UserID_editingFinished()
-{
-    bool UserPassword = false;
-    UserPassword = (0 != ui->Password->text().length()) && (0 != ui->UserID->text().length());
-    ui->Verify_User_Password->setEnabled(UserPassword);
-}
-
-void testQT1::on_Password_editingFinished()
-{
-    bool UserPassword = false;
-    UserPassword = (0 != ui->Password->text().length()) && (0 != ui->UserID->text().length());
-    ui->Verify_User_Password->setEnabled(UserPassword);
-}
-
 void testQT1::on_actionAboutQt_triggered()
 {
     QApplication::aboutQt();
 };
+
+void testQT1::on_UserID_textChanged(const QString &arg1)
+{
+    bool UserPassword = false;
+    UserPassword = (0 != ui->Password->text().length()) && (0 != ui->UserID->text().length());
+    ui->Verify_User_Password->setEnabled(UserPassword);
+}
+
+void testQT1::on_Password_textChanged(const QString &arg1)
+{
+    bool UserPassword = false;
+    UserPassword = (0 != ui->Password->text().length()) && (0 != ui->UserID->text().length());
+    ui->Verify_User_Password->setEnabled(UserPassword);
+}
