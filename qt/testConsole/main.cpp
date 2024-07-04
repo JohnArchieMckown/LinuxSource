@@ -12,13 +12,15 @@ int main(int argc, char *argv[])
     QCoreApplication a(argc, argv);
 
     const int pid = a.applicationPid();
-    vector<string> arguments(argv, argv + argc);
+    //    vector<string> arguments(argv, argv + argc);
 
     const QStringList environment = QProcessEnvironment::systemEnvironment().toStringList();
 
     QStringList args;
-    for (string s_arg : arguments) {
-        QString qs_arg = QString::fromStdString(s_arg);
+    //  for (string s_arg : arguments) {
+    for (int i = 0; i < argc; i++) {
+        //      QString qs_arg = QString::fromStdString(s_arg);
+        QString qs_arg = QString::fromStdString(argv[i]);
         args.push_back(qs_arg);
     }
 
