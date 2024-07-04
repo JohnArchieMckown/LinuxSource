@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     const QStringList args = a.arguments();
     QTextStream input(stdin);
     QTextStream output(stdout);
-    //    QTextStream errout(stderr);
+    QTextStream errout(stderr);
 
     output << "Running with pid=" << pid << Qt::endl;
     output << Qt::endl << "Environment Variables" << Qt::endl;
