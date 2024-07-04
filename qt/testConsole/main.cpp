@@ -15,16 +15,17 @@ int main(int argc, char *argv[])
     QTextStream output(stdout);
     QTextStream errout(stderr);
 
-    output << "Running with pid=" << pid << Qt::endl;
-    output << Qt::endl << "Environment Variables" << Qt::endl;
+    output << "Running with pid=" << pid << '\n';
+    output << '\n' << "Environment Variables" << '\n';
     for (QString env : environment) {
-        output << env << Qt::endl;
+        output << env << '\n';
     }
 
-    output << Qt::endl << "Program arguments (" << args.size() << "):" << Qt::endl;
+    output << '\n' << "Program arguments (" << args.size() << "):" << '\n';
     for (QString arg : args) {
-        output << arg << Qt::endl;
+        output << arg << '\n';
     }
+    output.flush(); // likely not needed, but I'm OCD
 
     return 0; // a.exec(); the a.exec() put in by qtcreator is wrong.
 }
