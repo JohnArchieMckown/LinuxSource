@@ -15,11 +15,7 @@ int main(int argc, char *argv[])
 
     const QStringList environment = QProcessEnvironment::systemEnvironment().toStringList();
 
-    QStringList args;
-
-    for (int i = 0; i < argc; i++) {
-        args.push_back(QString::fromStdString(argv[i]));
-    }
+    QStringList args = a.arguments();
 
     std::cout << "Running with pid=" << pid << endl;
     std::cout << endl << "Environment Variables" << endl;
