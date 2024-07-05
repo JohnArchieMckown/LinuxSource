@@ -39,6 +39,8 @@ private slots:
 
     void showTime(); // manual addition
 
+    void clearExtraText(); // manual addition
+
 private:
     Ui::testQt1 *ui;
 };

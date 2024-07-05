@@ -3,9 +3,8 @@
 
 #include <QDateTime>
 #include <QTimer>
-#include <chrono>
-#include <iostream>
-#include <thread>
+
+QString statusboxExtraText = ""; // just too stupid to figure out how to avoid a global
 
 testQt1::testQt1(QWidget *parent)
     : QMainWindow(parent)
@@ -29,10 +28,15 @@ testQt1::~testQt1()
     delete ui;
 }
 
+void testQt1::clearExtraText()
+{
+    statusboxExtraText = "";
+}
+
 void testQt1::showTime()
 {
     QTime time = QTime::currentTime();
-    QString time_text = time.toString("hh:mm:ss");
+    QString time_text = time.toString("hh:mm:ss") + statusboxExtraText;
     ui->statusbar->showMessage(time_text);
 }
 
@@ -66,11 +70,12 @@ void testQt1::on_Verify_User_Password_clicked()
 {
     QString pass = ui->Password->text();
     QString user = ui->UserID->text();
-    QString LoginInfo = "User:" + user + " successfully logged on.";
-    ui->statusbar->showMessage(LoginInfo, 10000); // 10 seconds
+    statusboxExtraText = "User:" + user + " successfully logged on.";
+    //  ui->statusbar->showMessage(LoginInfo, 10000); // 10 seconds
     ui->UserID->clear();
     ui->Password->clear();
     ui->UserID->setFocus();
+    QTimer::singleShot(10000, this, &testQt1::clearExtraText);
 }
 
 void testQt1::on_HidePassword_clicked()
