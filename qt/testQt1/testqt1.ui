@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>testQT1</class>
- <widget class="QMainWindow" name="testQT1">
+ <class>testQt1</class>
+ <widget class="QMainWindow" name="testQt1">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>testQT1</string>
+   <string>testQt1</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget">

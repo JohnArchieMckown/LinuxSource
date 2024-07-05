@@ -6,17 +6,17 @@
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class testQT1;
+class testQt1;
 }
 QT_END_NAMESPACE
 
-class testQT1 : public QMainWindow
+class testQt1 : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    testQT1(QWidget *parent = nullptr);
-    ~testQT1();
+    testQt1(QWidget *parent = nullptr);
+    ~testQt1();
 
 private slots:
     void on_pushButton_pressed();
@@ -37,7 +37,9 @@ private slots:
 
     void on_Password_textChanged(const QString &arg1);
 
+    void showTime(); // manual addition
+
 private:
-    Ui::testQT1 *ui;
+    Ui::testQt1 *ui;
 };
 #endif // TESTQT1_H

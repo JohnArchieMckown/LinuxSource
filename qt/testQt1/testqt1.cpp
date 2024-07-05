@@ -1,9 +1,15 @@
 #include "testqt1.h"
 #include "./ui_testqt1.h"
 
-testQT1::testQT1(QWidget *parent)
+#include <QDateTime>
+#include <QTimer>
+#include <chrono>
+#include <iostream>
+#include <thread>
+
+testQt1::testQt1(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::testQT1)
+    , ui(new Ui::testQt1)
 {
     ui->setupUi(this);
     ui->Password->clear();
@@ -11,31 +17,43 @@ testQT1::testQT1(QWidget *parent)
     ui->UserID->setFocus();
     ui->HidePassword->setChecked(true);
     ui->Verify_User_Password->setEnabled(false);
+    QTimer *timer = new QTimer(this);
+    showTime();
+    connect(timer, &QTimer::timeout, this, &testQt1::showTime);
+    timer->setInterval(1000);
+    timer->start();
 }
 
-testQT1::~testQT1()
+testQt1::~testQt1()
 {
     delete ui;
 }
 
-void testQT1::on_pushButton_pressed()
+void testQt1::showTime()
+{
+    QTime time = QTime::currentTime();
+    QString time_text = time.toString("hh:mm:ss");
+    ui->statusbar->showMessage(time_text);
+}
+
+void testQt1::on_pushButton_pressed()
 {
     ui->Result->setText("Pressed");
     ui->pushButton->setText("Release Me");
 }
 
-void testQT1::on_pushButton_released()
+void testQt1::on_pushButton_released()
 {
     ui->Result->setText("Released");
     ui->pushButton->setText("Press Me");
 }
 
-void testQT1::on_CloseButton_clicked()
+void testQt1::on_CloseButton_clicked()
 {
     close();
 }
 
-void testQT1::on_actionAbout_triggered()
+void testQt1::on_actionAbout_triggered()
 {
     QString aboutText = "";
     aboutText += "Version:\t0.1\n";
@@ -44,7 +62,7 @@ void testQT1::on_actionAbout_triggered()
     QMessageBox::about(this, "About", aboutText);
 }
 
-void testQT1::on_Verify_User_Password_clicked()
+void testQt1::on_Verify_User_Password_clicked()
 {
     QString pass = ui->Password->text();
     QString user = ui->UserID->text();
@@ -55,7 +73,7 @@ void testQT1::on_Verify_User_Password_clicked()
     ui->UserID->setFocus();
 }
 
-void testQT1::on_HidePassword_clicked()
+void testQt1::on_HidePassword_clicked()
 {
     if (ui->HidePassword->isChecked()) {
         ui->Password->setEchoMode(QLineEdit::Password);
@@ -64,19 +82,19 @@ void testQT1::on_HidePassword_clicked()
     }
 }
 
-void testQT1::on_actionAboutQt_triggered()
+void testQt1::on_actionAboutQt_triggered()
 {
     QApplication::aboutQt();
 };
 
-void testQT1::on_UserID_textChanged(const QString &arg1)
+void testQt1::on_UserID_textChanged(const QString &arg1)
 {
     bool UserPassword = false;
     UserPassword = (0 != ui->Password->text().length()) && (0 != ui->UserID->text().length());
     ui->Verify_User_Password->setEnabled(UserPassword);
 }
 
-void testQT1::on_Password_textChanged(const QString &arg1)
+void testQt1::on_Password_textChanged(const QString &arg1)
 {
     bool UserPassword = false;
     UserPassword = (0 != ui->Password->text().length()) && (0 != ui->UserID->text().length());

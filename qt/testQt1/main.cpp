@@ -5,7 +5,7 @@
 int main(int argc, char *argv[], char *envp[])
 {
     QApplication a(argc, argv);
-    testQT1 w;
+    testQt1 w;
     w.show();
     return a.exec();
 }
