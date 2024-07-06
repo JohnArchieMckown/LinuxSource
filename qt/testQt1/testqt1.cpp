@@ -36,7 +36,7 @@ void testQt1::clearExtraText()
 void testQt1::showTime()
 {
     QTime time = QTime::currentTime();
-    QString time_text = time.toString("hh:mm:ss") + statusboxExtraText;
+    QString time_text = time.toString("hh:mm:ss ") + statusboxExtraText;
     ui->statusbar->showMessage(time_text);
 }
 
@@ -95,13 +95,13 @@ void testQt1::on_actionAboutQt_triggered()
 void testQt1::on_UserID_textChanged(const QString &arg1)
 {
     bool UserPassword = false;
-    UserPassword = (0 != ui->Password->text().length()) && (0 != ui->UserID->text().length());
+    UserPassword = (0 != ui->Password->text().length()) && (0 != arg1.length());
     ui->Verify_User_Password->setEnabled(UserPassword);
 }
 
 void testQt1::on_Password_textChanged(const QString &arg1)
 {
     bool UserPassword = false;
-    UserPassword = (0 != ui->Password->text().length()) && (0 != ui->UserID->text().length());
+    UserPassword = (0 != arg1.length()) && (0 != ui->UserID->text().length());
     ui->Verify_User_Password->setEnabled(UserPassword);
 }
