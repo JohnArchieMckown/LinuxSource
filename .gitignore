@@ -11,3 +11,4 @@ a.out
 nohup.out
 /NetbeansJavaTemplate/build/*
 build
+.qtc_clangd
