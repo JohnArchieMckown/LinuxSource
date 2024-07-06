@@ -1,6 +1,8 @@
-QT = core gui widgets
+QT += core gui widgets
 
-TARGET = testQt1
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+CONFIG += c++17
 
 HEADERS += \
         testqt1.h
