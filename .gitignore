@@ -13,3 +13,5 @@ nohup.out
 build
 .qtc_clangd
 moc_*
+*.pro.user
+

@@ -2,7 +2,7 @@
 #include <QtCore/qglobal.h>
 
 #include <QTextStream>
-#include <QTimer>
+//#include <QTimer>
 #include <QtCore/QProcessEnvironment>
 
 int main(int argc, char *argv[])
@@ -28,6 +28,6 @@ int main(int argc, char *argv[])
     }
     output.flush(); // likely not needed, but I'm OCD
 
-    QTimer::singleShot(1, &a, [] { exit(0); });
-    return a.exec(); // the a.exec() put in by qtcreator is wrong.
+    //  QTimer::singleShot(1, &a, [] { exit(0); });
+    return 0; // a.exec(); the a.exec() is only needed for some async services.
 }
