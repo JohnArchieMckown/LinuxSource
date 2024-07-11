@@ -39,12 +39,12 @@ int main (int argc, char *argv[], char *envp[]) {
 	int index=0;
 	std::vector<std::string> arguments(argv, argv+argc);
 
-	std::cout << "There are " + std::to_string(argc) + " arguments\n" ;
-	for(std::string argument : arguments) { 
-		std::cout << std::to_string(index++) + ":\t" +argument << '\n'; 
-	}
-	
-	Mine x1; // = new Mine();
+    std::cout << "There are " << argc << " arguments\n";
+    for (std::string argument : arguments) {
+        std::cout << index++ << ":\t" + argument << '\n';
+    }
+
+    Mine x1; // = new Mine();
 	x1.m_mine = 1234;
 	Mine x2; // = new Mine();
         x2 = x1;

@@ -11,10 +11,10 @@ const char stdc_version[]="stdVersion:" xstr(__STDC_VERSION__) "\n";
 int main(int argc, char *argv[], char *envp[]) {
 	int envp_count=0;
 	char **envp_=envp;
-	char is[]="is";
-	char are[]="are";
+    const char is[] = "is";
+    const char are[] = "are";
 
-	printf("Environment variables follow.\n");
+    printf("Environment variables follow.\n");
 	while(*envp_) {
 		envp_count++;
 		printf("%s\n",*envp_++);
