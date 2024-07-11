@@ -16,9 +16,9 @@ public:
 
     virtual void SetTwo(int value);
 
-    virtual int GetOne();
+    virtual int GetOne() const;
 
-    virtual int GetTwo();
+    virtual int GetTwo() const;
 private:
     int One;
     int Two;

@@ -39,12 +39,12 @@ void Mine::SetTwo(int value)
     Two = value;
 }
 
-int Mine::GetOne()
+int Mine::GetOne() const
 {
     return One;
 }
 
-int Mine::GetTwo()
+int Mine::GetTwo() const
 {
     return Two;
 }
