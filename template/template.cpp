@@ -12,7 +12,7 @@ class Mine {
 //		m_mine = std::make_unique<Mine>()
 	}
 
-	~Mine() {
+	virtual ~Mine() {
 		std::cout << "Mine() destructor" << std::endl;
 	}
 
