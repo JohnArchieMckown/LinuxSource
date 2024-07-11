@@ -57,6 +57,16 @@ int main (int argc, char *argv[], char *envp[]) {
 	std::cout << "x3:" << x3.m_mine << " " << &x3.m_mine << " " << &x3 << std::endl;
 //	delete x1;
 //	delete x2;
+/* 
+ * Code copied from cppreference.com
+ *
+ *   std::ranges::for_each(std::views::iota(1, 10), [](int i)
+ *   {
+ *       std::cout << i << ' ';
+ *   });
+ *   std::cout << '\n';
+ *
+ */
 
 	return 0;
 }
