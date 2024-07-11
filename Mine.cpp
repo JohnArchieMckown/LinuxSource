@@ -49,5 +49,5 @@ int Mine::GetTwo()
     return Two;
 }
 
-int One = 0;
-int Two = 0;
+int One = 1;
+int Two = 2;

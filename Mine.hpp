@@ -19,7 +19,7 @@ public:
     virtual int GetOne();
 
     virtual int GetTwo();
-
+private:
     int One;
     int Two;
 };
