@@ -27,6 +27,9 @@ public:
         m_mine = rhs.m_mine;
     }
 
+    Mine(const Mine &&rhs) = delete;
+	    
+
     int m_mine;
 };
 
