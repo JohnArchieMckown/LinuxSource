@@ -8,16 +8,16 @@ class Mine {
 	public:
 
 	Mine() {
-		std::cout << "Mine() constructor" << std::endl;
+		std::cout << "Mine() constructor\n" ;
 //		m_mine = std::make_unique<Mine>()
 	}
 
 	virtual ~Mine() {
-		std::cout << "Mine() destructor" << std::endl;
+		std::cout << "Mine() destructor\n" ;
 	}
 
 	Mine& operator=(const Mine& lhs) {
-		std::cout << "Mine() operator=" << std::endl;
+		std::cout << "Mine() operator=\n" ;
 		if (this == &lhs) {
 			return *this;
 		}
@@ -26,7 +26,7 @@ class Mine {
 	}
 
 	Mine(const Mine& rhs) {
-		std::cout << "Mine() copy constructor" << std::endl;
+		std::cout << "Mine() copy constructor\n" ;
 		m_mine = rhs.m_mine;
 
 	}
@@ -39,7 +39,7 @@ int main (int argc, char *argv[], char *envp[]) {
 	int index=0;
 	std::vector<std::string> arguments(argv, argv+argc);
 
-	std::cout << "There are " + std::to_string(argc) + " arguments" << '\n';
+	std::cout << "There are " + std::to_string(argc) + " arguments\n" ;
 	for(std::string argument : arguments) { 
 		std::cout << std::to_string(index++) + ":\t" +argument << '\n'; 
 	}
