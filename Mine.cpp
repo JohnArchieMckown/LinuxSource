@@ -22,11 +22,11 @@ Mine &Mine::operator=(const Mine &lhs)
     return *this;
 }
 
-Mine::Mine(const Mine &rhs)
+Mine::Mine(const Mine &rhs) : One{rhs.One}, Two{rhs.Two}
 {
     std::cout << "Mine() copy constructor\n";
-    One = rhs.One;
-    Two = rhs.Two;
+//    One = rhs.One;
+//    Two = rhs.Two;
 }
 
 void Mine::SetOne(int value)
