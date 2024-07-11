@@ -16,10 +16,10 @@ int main(int argc, char *argv[], char *envp[])
         std::cout << index++ << ":\t" + argument << '\n';
     }
 
-    Mine x1; // = new Mine();
+    Mine x1{}; // = new Mine();
     x1.SetOne(1);
     x1.SetTwo(2);
-    Mine x2; // = new Mine();
+    Mine x2{}; // = new Mine();
     x2 = x1;
     x2.SetOne(4321);
     Mine x3 = x2;
