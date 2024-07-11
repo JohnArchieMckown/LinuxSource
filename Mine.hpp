@@ -1,27 +1,26 @@
 #ifndef MINE__HPP
 #define MINE_HPP
 
-class Mine {
-	public:
+class Mine
+{
+public:
+    Mine(); // standard constructor
 
-	Mine() ;	// standard constructor
+    virtual ~Mine(); // deconstructon
 
-	virtual ~Mine();// deconstructon
+    Mine &operator=(const Mine &lhs);
 
-	Mine& operator=(const Mine& lhs); 
+    Mine(const Mine &rhs); // copy constructor
 
-	Mine(const Mine& rhs); // copy constructor
+    virtual void SetOne(int value);
 
-	virtual void SetOne(int value);
+    virtual void SetTwo(int value);
 
-	virtual void SetTwo(int value);
+    virtual int GetOne();
 
-	virtual int GetOne();
+    virtual int GetTwo();
 
-	virtual int GetTwo();
-
-	int One;
-	int Two;
+    int One;
+    int Two;
 };
 #endif
-
