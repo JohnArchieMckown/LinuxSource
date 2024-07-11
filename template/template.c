@@ -25,4 +25,4 @@ int main(int argc, char *argv[], char *envp[]) {
 		printf("Argument %d is %lu bytes:%s\n",i,strlen(argv[i]), argv[i]);
 	}
 }
-		
+
