@@ -15,3 +15,5 @@ build
 moc_*
 *.pro.user
 
+*.a
+*.so
