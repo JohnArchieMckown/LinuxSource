@@ -1,0 +1,10 @@
+to compile to an object file:
+g++ -Wall -c <file>.cpp  # add -fPIC to put in a shared object
+gcc -Wall -c <file>.c
+
+to add to an archive
+ar r <lib???.a> <file>.o #make sure you added -fPIC as above!
+
+to add to a .so
+g++ -shared libMcKown.so <file>.o
+
