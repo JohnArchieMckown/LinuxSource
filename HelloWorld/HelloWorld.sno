@@ -1,0 +1,4 @@
+	OUTPUT = "Hello World"
+	x = 123
+	OUTPUT = x + 456 " equals the sum of 123 and 456"
+END
