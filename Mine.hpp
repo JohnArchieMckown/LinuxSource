@@ -1,5 +1,5 @@
 #ifndef MINE__HPP
-#define MINE_HPP
+#define MINE__HPP
 
 class Mine
 {
