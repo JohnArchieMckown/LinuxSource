@@ -1,17 +1,21 @@
 // D programming language
-void main()
+void main(string[] args)
 {
-    import std.stdio : writefln;
-    import std.algorithm.sorting : sort;
-    import std.range : chain;
+    import std.stdio : writefln, writeln;
+	import std.algorithm : sort;
+	import std.process : environment; // UNIX environment variables as an immutable map
+	
+	string Is="is";
+	string Are="are";
+	ulong alen=args.length;
+	string[string] envs = environment.toAA;
 
-    int[] arr1 = [4, 9, 7];
-    int[] arr2 = [5, 2, 1, 10];
-    int[] arr3 = [6, 8, 3];
-    // @nogc functions are guaranteed by the compiler
-    // to be without any GC allocation
-    () @nogc {
-        sort(chain(arr1, arr2, arr3));
-    }();
-    writefln("%s\n%s\n%s\n", arr1, arr2, arr3);
+	writefln("There %s %d argument%s.\n", alen==1?Is:Are, alen, alen==1?"":"s");
+	for(ulong idx=0; idx < alen; ++idx) {
+		writefln("Argument %d is: %s",idx,args[idx]);
+	}
+	writefln("\nEnvironment Variables.");
+	foreach(envName; envs.keys.sort) {
+		writefln("%s=%s",envName,envs[envName]);
+	}
 }
