@@ -7,7 +7,7 @@ import std.conv;
 
 void main() {
 	// Variables
-	const int numberOfTests = 10_000_000;
+	const int numberOfTests = 100_000_000;
 	auto countOfValue = new int[100]; 
 	auto rnd = Random(unpredictableSeed);
 	for(int i=0;i<numberOfTests;i++) {
