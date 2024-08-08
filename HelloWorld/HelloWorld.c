@@ -3,7 +3,7 @@
 #include <limits.h>
 #include <unistd.h>
 int main(int argc, char **argv, char **envp) {
-	printf("Hello, World!\n");
+	printf("Hello, World from C!\n");
 }
 
 

@@ -2,5 +2,5 @@
 with Text_IO; use Text_IO;
 procedure HelloWorld is
 begin
-	Put_Line( "Hello from Ada!" );
+	Put_Line( "Hello World from Ada!" );
 end HelloWorld;

@@ -2,5 +2,5 @@
 
 void main() {
 	import std.stdio : writeln ; // only bring in writeln
-	writeln("Hello, World!");
+	writeln("Hello, World from D!");
 }
